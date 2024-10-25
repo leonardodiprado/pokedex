@@ -1,0 +1,27 @@
+<!-- views/createTrainer.ejs -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Treinador</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Cadastrar Treinador</h1>
+    <form action="/trainer/create" method="POST">
+        <label for="trainer-name">Nome do Treinador:</label>
+        <input type="text" id="trainer-name" name="name" required><br><br>
+        <label>Pokémons:</label><br>
+        <% pokemons.forEach(function(pokemon) { %>
+            <input type="checkbox" name="selectedPokemons" value="<%= pokemon.id %>"> <%= pokemon.name %><br>
+        <% }); %>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <br>
+    <div class="center-links">
+        <a href="/trainers">LISTA DE TREINADORES</a>
+        <a href="/">VOLTAR À POKÉDEX</a>
+    </div>
+</body>
+</html>

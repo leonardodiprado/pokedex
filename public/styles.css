@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Configurações gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Azul claro como cor de fundo */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Para permitir a pseudo-classe */
+}
+
+body::after {
+    content: "";
+    position: fixed; /* Fixa a imagem no fundo da tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/pokeball.png'); /* Caminho para a imagem de Pokébola */
+    background-repeat: repeat; /* Faz a imagem se repetir */
+    background-size: 15%; /* Diminui o tamanho das imagens */
+    opacity: 0.2; /* Ajusta a opacidade das imagens */
+    z-index: -1; /* Coloca a imagem de fundo atrás do conteúdo */
+}
+
+
+
+/* Estilo do cabeçalho */
+h1 {
+    text-align: center;
+    color: #ffcb05;
+    font-size: 3em;
+    margin-top: 20px;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Contorno preto */
+}
+
+
+/* Container da lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul li {
+    background-color: #ffcb05;
+    color: #3b4cca;
+    border: 2px solid #3b4cca;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+}
+
+ul li a {
+    text-decoration: none;
+    color: #3b4cca;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+ul li a:hover {
+    color: #ffcb05;
+    background-color: #3b4cca;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+/* Estilo do formulário */
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffcb05;
+    border: 2px solid #3b4cca;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    color: #3b4cca;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.2em;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #3b4cca;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+form button {
+    width: 100%;
+    background-color: #3b4cca;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    margin-top: 20px; /* Adiciona margem superior */
+}
+
+form button:hover {
+    background-color: #ffffff;
+    color: #3b4cca;
+    border: 2px solid #3b4cca;
+}
+
+form button:hover {
+    background-color: #ffffff;
+    color: #3b4cca;
+    border: 2px solid #3b4cca;
+}
+
+/* Estilo da página de detalhes do Pokémon */
+.pokemon-details {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffcb05;
+    border: 2px solid #3b4cca;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pokemon-details h1 {
+    color: #3b4cca;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.pokemon-details p {
+    font-size: 1.2em;
+    color: #3b4cca;
+}
+
+.pokemon-details a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3b4cca;
+    color: #ffcb05;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.pokemon-details a:hover {
+    background-color: #ffcb05;
+    color: #3b4cca;
+    border: 2px solid #3b4cca;
+}
+
+/* Centralizar links */
+.center-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.center-links a {
+    margin: 10px 0;
+}
+
+/* Ajustar campos de Nome e Tipo */
+input[type="text"]#nome, input[type="text"]#tipo {
+    width: 70%; /* Ajuste a largura conforme necessário */
+    margin: 10px 0; /* Ajuste a margem conforme necessário */
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Ajustar campo de Nome do Treinador */
+input[type="text"]#trainer-name {
+    width: 70%; /* Ajuste a largura conforme necessário */
+    margin: 10px 0; /* Ajuste a margem conforme necessário */
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Centralizar links */
+.center-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.center-links a {
+    display: block;
+    margin: 0; /* Remove o espaço entre os links */
+}
+
+
+
+

@@ -1,0 +1,22 @@
+<!-- views/trainerIndex.ejs -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Treinadores</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Lista de Treinadores</h1>
+    <ul>
+        <% trainers.forEach(function(trainer) { %>
+            <li><%= trainer.name %> - <%= trainer.pokemons.map(p => p.name).join(", ") %></li>
+        <% }); %>
+    </ul>
+    <br>
+    <div class="center-links">
+        <a href="/trainer/create">CADASTRAR NOVO TREINADOR</a>
+        <a href="/">VOLTAR À POKÉDEX</a>
+    </div>
+</body>
+</html>
